@@ -2,29 +2,54 @@
 
 Laws, Theories, Principles and Patterns that developers will find useful.
 
-🇨🇳 [中文 / Chinese Version](https://github.com/nusr/hacker-laws-zh) - thanks [Steve Yu](https://github.com/nusr)!
+- 🇨🇳 [中文 / Chinese Version](https://github.com/nusr/hacker-laws-zh) - thanks [Steve Xu](https://github.com/nusr)!
+- 🇮🇹 [Traduzione in Italiano](https://github.com/csparpa/hacker-laws-it) - grazie [Claudio Sparpaglione](https://github.com/csparpa)!
+- 🇰🇷 [한국어 / Korean Version](https://github.com/codeanddonuts/hacker-laws-kr) - thanks [Doughnut](https://github.com/codeanddonuts)!
+- 🇷🇺 [Русская версия / Russian Version](https://github.com/solarrust/hacker-laws) - thanks [Alena Batitskaya](https://github.com/solarrust)!
+- 🇹🇷 [Türkçe / Turkish Version](https://github.com/umutphp/hacker-laws-tr) - thanks [Umut Işık](https://github.com/umutphp)
+- 🇧🇷 [Brasileiro / Brazilian Version](./translations/pt-BR.md) - thanks [Leonardo Costa](https://github.com/LeoFC97)
+- 🇪🇸 [Castellano / Spanish Version](./translations/es-ES.md) - thanks [Manuel Rubio](https://github.com/manuel-rubio)
+
+Like this project? Please considering [Sponsoring Me](https://github.com/sponsors/dwmkerr)!
+
+---
 
 <!-- vim-markdown-toc GFM -->
 
 * [Introduction](#introduction)
 * [Laws](#laws)
     * [Amdahl's Law](#amdahls-law)
-    * [Brooks's Law](#brookss-law)
+    * [The Broken Windows Theory](#the-broken-windows-theory)
+    * [Brooks' Law](#brooks-law)
     * [Conway's Law](#conways-law)
+    * [Cunningham's Law](#cunninghams-law)
+    * [Dunbar's Number](#dunbars-number)
+    * [Gall's Law](#galls-law)
+    * [Goodhart's Law](#goodharts-law)
     * [Hanlon's Razor](#hanlons-razor)
     * [Hofstadter's Law](#hofstadters-law)
+    * [Hutber's Law](#hutbers-law)
     * [The Hype Cycle & Amara's Law](#the-hype-cycle--amaras-law)
     * [Hyrum's Law (The Law of Implicit Interfaces)](#hyrums-law-the-law-of-implicit-interfaces)
+    * [Metcalfe's Law](#metcalfes-law)
     * [Moore's Law](#moores-law)
+    * [Murphy's Law / Sod's Law](#murphys-law--sods-law)
+    * [Occam's Razor](#occams-razor)
     * [Parkinson's Law](#parkinsons-law)
+    * [Premature Optimization Effect](#premature-optimization-effect)
     * [Putt's Law](#putts-law)
+    * [Reed's Law](#reeds-law)
     * [The Law of Conservation of Complexity (Tesler's Law)](#the-law-of-conservation-of-complexity-teslers-law)
     * [The Law of Leaky Abstractions](#the-law-of-leaky-abstractions)
     * [The Law of Triviality](#the-law-of-triviality)
     * [The Unix Philosophy](#the-unix-philosophy)
     * [The Spotify Model](#the-spotify-model)
     * [Wadler's Law](#wadlers-law)
+    * [Wheaton's Law](#wheatons-law)
 * [Principles](#principles)
+    * [The Dilbert Principle](#the-dilbert-principle)
+    * [The Pareto Principle (The 80/20 Rule)](#the-pareto-principle-the-8020-rule)
+    * [The Peter Principle](#the-peter-principle)
     * [The Robustness Principle (Postel's Law)](#the-robustness-principle-postels-law)
     * [SOLID](#solid)
     * [The Single Responsibility Principle](#the-single-responsibility-principle)
@@ -32,6 +57,12 @@ Laws, Theories, Principles and Patterns that developers will find useful.
     * [The Liskov Substitution Principle](#the-liskov-substitution-principle)
     * [The Interface Segregation Principle](#the-interface-segregation-principle)
     * [The Dependency Inversion Principle](#the-dependency-inversion-principle)
+    * [The DRY Principle](#the-dry-principle)
+    * [The KISS principle](#the-kiss-principle)
+    * [YAGNI](#yagni)
+    * [The Fallacies of Distributed Computing](#the-fallacies-of-distributed-computing)
+* [Reading List](#reading-list)
+* [Contributing](#contributing)
 * [TODO](#todo)
 
 <!-- vim-markdown-toc -->
@@ -56,7 +87,7 @@ Best illustrated with an example. If a program is made up of two parts, part A, 
 
 The diagram below shows some examples of potential improvements in speed:
 
-![Diagram: Amdahl's Law](./images/amdahls_law.png)
+<img width="480px" alt="Diagram: Amdahl's Law" src="./images/amdahls_law.png" />
 
 *(Image Reference: By Daniels220 at English Wikipedia, Creative Commons Attribution-Share Alike 3.0 Unported, https://en.wikipedia.org/wiki/File:AmdahlsLaw.svg)*
 
@@ -66,22 +97,43 @@ As [Moore's Law](#moores-law) slows, and the acceleration of individual processo
 
 See also:
 
-- [Brooks's Law](#brookss-law)
+- [Brooks' Law](#brooks-law)
 - [Moore's Law](#moores-law)
 
-### Brooks's Law
+### The Broken Windows Theory
 
-[Brooks's Law on Wikipedia](https://en.m.wikipedia.org/wiki/Brooks%27s_law)
+[The Broken Windows Theory on Wikipedia](https://en.wikipedia.org/wiki/Broken_windows_theory)
+
+The Broken Windows Theory suggests that visible signs of crime (or lack of care of an environment) lead to further and more serious crimes (or further deterioration of the environment).
+
+This theory has been applied to software development, suggesting that poor quality code (or [Technical Debt](#TODO)) can lead to a perception that efforts to improve quality may be ignored or undervalued, thus leading to further poor quality code. This effect cascades leading to a great decrease in quality over time.
+
+See also:
+
+- [Technical Debt](#TODO)
+
+Examples:
+
+- [The Pragmatic Programming: Software Entropy](https://pragprog.com/the-pragmatic-programmer/extracts/software-entropy)
+- [Coding Horror: The Broken Window Theory](https://blog.codinghorror.com/the-broken-window-theory/)
+- [OpenSource: Joy of Programming - The Broken Window Theory](https://opensourceforu.com/2011/05/joy-of-programming-broken-window-theory/)
+
+### Brooks' Law
+
+[Brooks' Law on Wikipedia](https://en.wikipedia.org/wiki/Brooks%27s_law)
 
 > Adding human resources to a late software development project makes it later.
 
 This law suggests that in many cases, attempting to accelerate the delivery of a project which is already late, by adding more people, will make the delivery even later. Brooks is clear that this is an over-simplification, however, the general reasoning is that given the ramp up time of new resources and the communication overheads, in the immediate short-term velocity decreases. Also, many tasks may not be divisible, i.e. easily distributed between more resources, meaning the potential velocity increase is also lower.
 
-The common phrase in delivery "Nine women can't make a baby in one month" relates to Brooks's Law, in particular, the fact that some kinds of work are not divisible or parallelisable.
+The common phrase in delivery "Nine women can't make a baby in one month" relates to Brooks' Law, in particular, the fact that some kinds of work are not divisible or parallelisable.
+
+This is a central theme of the book '[The Mythical Man Month](#reading-list)'.
 
 See also:
 
 - [Death March](#todo)
+- [Reading List: The Mythical Man Month](#reading-list)
 
 ### Conway's Law
 
@@ -92,6 +144,70 @@ This law suggests that the technical boundaries of a system will reflect the str
 See also:
 
 - [The Spotify Model](#the-spotify-model)
+
+### Cunningham's Law
+
+[Cunningham's Law on Wikipedia](https://en.wikipedia.org/wiki/Ward_Cunningham#Cunningham's_Law)
+
+> The best way to get the right answer on the Internet is not to ask a question, it's to post the wrong answer.
+
+According to Steven McGeady, Ward Cunningham advised him in the early 1980s: "The best way to get the right answer on the Internet is not to ask a question, it's to post the wrong answer." McGeady dubbed this Cunningham's law, though Cunningham denies ownership calling it a "misquote." Although originally referring to interactions on Usenet, the law has been used to describe how other online communities work (e.g., Wikipedia, Reddit, Twitter, Facebook).
+
+See also:
+
+- [XKCD 386: "Duty Calls"](https://xkcd.com/386/)
+
+### Dunbar's Number
+
+[Dunbar's Number on Wikipedia](https://en.wikipedia.org/wiki/Dunbar%27s_number)
+
+"Dunbar's number is a suggested cognitive limit to the number of people with whom one can maintain stable social relationships— relationships in which an individual knows who each person is and how each person relates to every other person." There is some disagreement to the exact number. "... [Dunbar] proposed that humans can comfortably maintain only 150 stable relationships." He put the number into a more social context, "the number of people you would not feel embarrassed about joining uninvited for a drink if you happened to bump into them in a bar." Estimates for the number generally lay between 100 and 250.
+
+Like stable relationships between individuals, a developer's relationship with a codebase takes effort to maintain. When faced with large complicated projects, or ownership of many projects we lean on convention, policy, and modeled procedure to scale. Dunbar's number is not only important to keep in mind as an office grows, but also when setting the scope for team efforts or deciding when a system should invest in tooling to assist in modeling and automating logistical overhead. Putting the number into an engineering context, it is the number of projects (or normalized complexity of a single project) for which you would feel confident in joining an on-call rotation to support.
+
+See also:
+
+- [Conway's Law](#conways-law)
+
+### Gall's Law
+
+[Gall's Law on Wikipedia](https://en.wikipedia.org/wiki/John_Gall_(author)#Gall's_law)
+
+> A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.
+>
+> ([John Gall](https://en.wikipedia.org/wiki/John_Gall_(author)))
+
+Gall's Law implies that attempts to _design_ highly complex systems are likely to fail. Highly complex systems are rarely built in one go, but evolve instead from more simple systems.
+
+The classic example is the world-wide-web. In it's current state, it is a highly complex system. However, it was defined initially as a simple way to share content between academic institutions. It was very successful in meeting these goals and evolved to become more complex over time.
+
+See also:
+
+- [KISS (Keep It Simple, Stupid)](#the-kiss-principle)
+
+### Goodhart's Law
+
+[The Goodhart's Law on Wikipedia](https://en.wikipedia.org/wiki/Goodhart's_law)
+
+> Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.
+>
+> _Charles Goodhart_
+
+Also commonly referenced as:
+
+> When a measure becomes a target, it ceases to be a good measure.
+>
+> _Marilyn Strathern_
+
+The law states that the measure-driven optimizations could lead to devaluation of the measurement outcome itself. Overly selective set of measures ([KPIs](https://en.wikipedia.org/wiki/Performance_indicator)) blindly applied to a process results in distorted effect. People tend to optimize locally by "gaming" the system in order to satisfy particular metrics instead of paying attention to holistic outcome of their actions.
+
+Real-world examples:
+- Assert-free tests satisfy the code coverage expectation, despite the metric intent was to create well-tested software.
+- Developer performance score indicated by the number of lines committed leads to unjustifiably bloated codebase.
+
+See also:
+- [Goodhart’s Law: How Measuring The Wrong Things Drive Immoral Behaviour](https://coffeeandjunk.com/goodharts-campbells-law/)
+- [Dilbert on bug-free software](https://dilbert.com/strip/1995-11-13)
 
 ### Hanlon's Razor
 
@@ -109,9 +225,27 @@ This principle suggests that actions resulting in a negative outcome were not a 
 
 > It always takes longer than you expect, even when you take into account Hofstadter's Law.
 >
-> Douglas Hofstadter
+> (Douglas Hofstadter)
 
 You might hear this law referred to when looking at estimates for how long something will take. It seems a truism in software development that we tend to not be very good at accurately estimating how long something will take to deliver.
+
+This is from the book '[Gödel, Escher, Bach: An Eternal Golden Braid](#reading-list)'.
+
+See also:
+
+- [Reading List: Gödel, Escher, Bach: An Eternal Golden Braid](#reading-list)
+
+### Hutber's Law
+
+[Hutber's Law on Wikipedia](https://en.wikipedia.org/wiki/Hutber%27s_law)
+
+> Improvement means deterioration.
+>
+> ([Patrick Hutber](https://en.wikipedia.org/wiki/Patrick_Hutber))
+
+This law suggests that improvements to a system will lead to deterioration in other parts, or it will hide other deterioration, leading overall to a degradation from the current state of the system.
+
+For example, a decrease in response latency for a particular end-point could cause increased throughput and capacity issues further along in a request flow, affecting an entirely different sub-system.
 
 ### The Hype Cycle & Amara's Law
 
@@ -147,6 +281,19 @@ See also:
 - [The Law of Leaky Abstractions](#the-law-of-leaky-abstractions)
 - [XKCD 1172](https://xkcd.com/1172/)
 
+
+### Metcalfe's Law
+
+[Metcalfe's Law on Wikipedia](https://en.wikipedia.org/wiki/Metcalfe's_law)
+
+> In network theory, the value of a system grows as approximately the square of the number of users of the system.
+
+This law is based on the number of possible pairwise connections within a system and is closely related to [Reed's Law](#reeds-law). Odlyzko and others have argued that both Reed's Law and Metcalfe's Law overstate the value of the system by not accounting for the limits of human cognition on network effects; see [Dunbar's Number](#dunbars-number).
+
+See also:
+- [Reed's Law](#reeds-law)
+- [Dunbar's Number](#dunbars-number)
+
 ### Moore's Law
 
 [Moore's Law on Wikipedia](https://en.wikipedia.org/wiki/Moore%27s_law)
@@ -154,6 +301,44 @@ See also:
 > The number of transistors in an integrated circuit doubles approximately every two years.
 
 Often used to illustrate the sheer speed at which semiconductor and chip technology has improved, Moore's prediction has proven to be highly accurate over from the 1970s to the late 2000s. In more recent years, the trend has changed slightly, partly due to [physical limitations on the degree to which components can be miniaturised](https://en.wikipedia.org/wiki/Quantum_tunnelling). However, advancements in parallelisation, and potentially revolutionary changes in semiconductor technology and quantum computing may mean that Moore's Law could continue to hold true for decades to come.
+
+### Murphy's Law / Sod's Law
+
+[Murphy's Law on Wikipedia](https://en.wikipedia.org/wiki/Murphy%27s_law)
+
+> Anything that can go wrong will go wrong.
+
+Related to [Edward A. Murphy, Jr](https://en.wikipedia.org/wiki/Edward_A._Murphy_Jr.) _Murphy's Law_ states that if a thing can go wrong, it will go wrong.
+
+This is a common adage among developers. Sometimes the unexpected happens when developing, testing or even in production. This can also be related to the (more common in British English) _Sod's Law_:
+
+> If something can go wrong, it will, at the worst possible time.
+
+These 'laws' are generally used in a comic sense. However, phenomena such as [_Confirmation Bias_](#TODO) and [_Selection Bias_](#TODO) can lead people to perhaps over-emphasise these laws (the majority of times when things work, they go unnoticed, failures however are more noticeable and draw more discussion).
+
+See Also:
+
+- [Confirmation Bias](#TODO)
+- [Selection Bias](#TODO)
+
+### Occam's Razor
+
+[Occam's Razor on Wikipedia](https://en.wikipedia.org/wiki/Occam's_razor)
+
+> Entities should not be multiplied without necessity.
+>
+> William of Ockham
+
+Occam's razor says that among several possible solutions, the most likely solution is the one with the least number of concepts and assumptions. This solution is the simplest and solves only the given problem, without introducing accidental complexity and possible negative consequences.
+
+See also:
+
+- [YAGNI](#yagni)
+- [No Silver Bullet: Accidental Complexity and Essential Complexity](https://en.wikipedia.org/wiki/No_Silver_Bullet)
+
+Example:
+
+- [Lean Software Development: Eliminate Waste](https://en.wikipedia.org/wiki/Lean_software_development#Eliminate_waste)
 
 ### Parkinson's Law
 
@@ -169,6 +354,18 @@ See also:
 
 - [Hofstadter's Law](#hofstadters-law)
 
+### Premature Optimization Effect
+
+[Premature Optimization on WikiWikiWeb](http://wiki.c2.com/?PrematureOptimization)
+
+> Premature optimization is the root of all evil.
+>
+> [(Donald Knuth)](https://twitter.com/realdonaldknuth?lang=en)
+
+In Donald Knuth's paper [Structured Programming With Go To Statements](http://wiki.c2.com/?StructuredProgrammingWithGoToStatements), he wrote: "Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: **premature optimization is the root of all evil**. Yet we should not pass up our opportunities in that critical 3%."
+
+However, _Premature Optimization_ can be defined (in less loaded terms) as optimizing before we know that we need to.
+
 ### Putt's Law
 
 [Putt's Law on Wikipedia](https://en.wikipedia.org/wiki/Putt%27s_Law_and_the_Successful_Technocrat)
@@ -179,15 +376,27 @@ Putt's Law is often followed by Putt's Corollary:
 
 > Every technical hierarchy, in time, develops a competence inversion.
 
-These statements suggest that due to various selection criteria and trends in how groups organise, there will be a number of skilled people at working levels of a technical organisations, and a number of people in managerial roles who are not aware of the complexities and challenges of the work they are managing. This can be due to phenomena such as [The Peter Principle](#TODO) or [Dilbert's Law](#TODO).
+These statements suggest that due to various selection criteria and trends in how groups organise, there will be a number of skilled people at working levels of a technical organisations, and a number of people in managerial roles who are not aware of the complexities and challenges of the work they are managing. This can be due to phenomena such as [The Peter Principle](#the-peter-principle) or [The Dilbert Principle](#the-dilbert-principle).
 
 However, it should be stressed that Laws such as this are vast generalisations and may apply to _some_ types of organisations, and not apply to others.
 
 See also:
 
-- [The Peter Principle](#TODO)
-- [Dilbert's Law](#TODO).
+- [The Peter Principle](#the-peter-principle)
+- [The Dilbert Principle](#the-dilbert-principle)
 
+
+### Reed's Law
+
+[Reed's Law on Wikipedia](https://en.wikipedia.org/wiki/Reed's_law)
+
+> The utility of large networks, particularly social networks, scales exponentially with the size of the network.
+
+This law is based on graph theory, where the utility scales as the number of possible sub-groups, which is faster than the number of participants or the number of possible pairwise connections. Odlyzko and others have argued that Reed's Law overstates the utility of the system by not accounting for the limits of human cognition on network effects; see [Dunbar's Number](#dunbars-number).
+
+See also:
+- [Metcalfe's Law](#metcalfes-law)
+- [Dunbar's Number](#dunbars-number)
 
 ### The Law of Conservation of Complexity (Tesler's Law)
 
@@ -205,7 +414,7 @@ One interesting element to this law is the suggestion that even by simplifying t
 
 > All non-trivial abstractions, to some degree, are leaky.
 >
-> (Joel Spolsky)
+> ([Joel Spolsky](https://twitter.com/spolsky))
 
 This law states that abstractions, which are generally used in computing to simplify working with complicated systems, will in certain situations 'leak' elements of the underlying system, this making the abstraction behave in an unexpected way.
 
@@ -231,7 +440,7 @@ This law suggests that groups will give far more time and attention to trivial o
 
 The common fictional example used is that of a committee approving plans for nuclear power plant, who spend the majority of their time discussing the structure of the bike shed, rather than the far more important design for the power plant itself. It can be difficult to give valuable input on discussions about very large, complex topics without a high degree of subject matter expertise or preparation. However, people want to be seen to be contributing valuable input. Hence a tendency to focus too much time on small details, which can be reasoned about easily, but are not necessarily of particular importance.
 
-The fictional example above led to the usage of the term 'Bike Shedding' as an expression for wasting time on trivial details.
+The fictional example above led to the usage of the term 'Bike Shedding' as an expression for wasting time on trivial details. An alternative term is 'Yak Shaving'.
 
 ### The Unix Philosophy
 
@@ -254,12 +463,12 @@ The Spotify Model also popularises the concepts of Tribes, Guilds, Chapters, whi
 [Wadler's Law on wiki.haskell.org](https://wiki.haskell.org/Wadler's_Law)
 
 > In any language design, the total time spent discussing a feature in this list is proportional to two raised to the power of its position.
-> 
+>
 > 0. Semantics
 > 1. Syntax
 > 2. Lexical syntax
 > 3. Lexical syntax of comments
-> 
+>
 > (In short, for every hour spent on semantics, 8 hours will be spent on the syntax of comments).
 
 Similar to [The Law of Triviality](#the-law-of-triviality), Wadler's Law states what when designing a language, the amount of time spent on language structures is disproportionately high in comparison to the importance of those features.
@@ -268,9 +477,75 @@ See also:
 
 - [The Law of Triviality](#the-law-of-triviality)
 
+### Wheaton's Law
+
+[The Link](http://www.wheatonslaw.com/)
+
+[The Official Day](https://dontbeadickday.com/)
+
+> Don't be a dick.
+>
+> _Wil Wheaton_
+
+Coined by Wil Wheaton (Star Trek: The Next Generation, The Big Bang Theory), this simple, concise, and powerful law aims for an increase in harmony and respect within a professional organization. It can be applied when speaking with coworkers, performing code reviews, countering other points of view, critiquing, and in general, most professional interactions humans have with each other.
+
 ## Principles
 
 Principles are generally more likely to be guidelines relating to design.
+
+### The Dilbert Principle
+
+[The Dilbert Principle on Wikipedia](https://en.wikipedia.org/wiki/Dilbert_principle)
+
+> Companies tend to systematically promote incompetent employees to management to get them out of the workflow.
+>
+> _Scott Adams_
+
+A management concept developed by Scott Adams (creator of the Dilbert comic strip), the Dilbert Principle is inspired by [The Peter Principle](#the-peter-principle). Under the Dilbert Principle, employees who were never competent are promoted to management in order to limit the damage they can do. Adams first explained the principle in a 1995 Wall Street Journal article, and expanded upon it in his 1996 business book, [The Dilbert Principle](#reading-list).
+
+See Also:
+
+- [The Peter Principle](#the-peter-principle)
+- [Putt's Law](#putts-law)
+
+### The Pareto Principle (The 80/20 Rule)
+
+[The Pareto Principle on Wikipedia](https://en.wikipedia.org/wiki/Pareto_principle)
+
+> Most things in life are not distributed evenly.
+
+The Pareto Principle suggests that in some cases, the majority of results come from a minority of inputs:
+
+- 80% of a certain piece of software can be written in 20% of the total allocated time (conversely, the hardest 20% of the code takes 80% of the time)
+- 20% of the effort produces 80% of the result
+- 20% of the work creates 80% of the revenue
+- 20% of the bugs cause 80% of the crashes
+- 20% of the features cause 80% of the usage
+
+In the 1940s American-Romanian engineer Dr. Joseph Juran, who is widely credited with being the father of quality control, [began to apply the Pareto principle to quality issues](https://en.wikipedia.org/wiki/Joseph_M._Juran).
+
+This principle is also known as: The 80/20 Rule, The Law of the Vital Few and The Principle of Factor Sparsity.
+
+Real-world examples:
+
+- In 2002 Microsoft reported that by fixing the top 20% of the most-reported bugs, 80% of the related errors and crashes in windows and office would become eliminated ([Reference](https://www.crn.com/news/security/18821726/microsofts-ceo-80-20-rule-applies-to-bugs-not-just-features.htm)).
+
+### The Peter Principle
+
+[The Peter Principle on Wikipedia](https://en.wikipedia.org/wiki/Peter_principle)
+
+> People in a hierarchy tend to rise to their "level of incompetence".
+>
+> _Laurence J. Peter_
+
+A management concept developed by Laurence J. Peter, the Peter Principle observes that people who are good at their jobs are promoted, until they reach a level where they are no longer successful (their "level of incompetence". At this point, as they are more senior, they are less likely to be removed from the organisation (unless they perform spectacularly badly) and will continue to reside in a role which they have few intrinsic skills at, as their original skills which made them successful are not necessarily the skills required for their new jobs.
+
+This is of particular interest to engineers - who initial start out in deeply technical roles, but often have a career path which leads to _managing_ other engineers - which requires a fundamentally different skills-set.
+
+See Also:
+
+- [The Dilbert Principle](#the-dilbert-principle)
+- [Putt's Law](#putts-law)
 
 ### The Robustness Principle (Postel's Law)
 
@@ -306,7 +581,7 @@ Theoretically, this should make the code more robust, and easier to change. Know
 
 See also:
 
-- [Object-Orientated Programming](#todo)
+- [Object-Oriented Programming](#todo)
 - [SOLID](#solid)
 
 ### The Open/Closed Principle
@@ -323,7 +598,7 @@ This principle has particular relevance for object-oriented programming, where w
 
 See also:
 
-- [Object-Orientated Programming](#todo)
+- [Object-Oriented Programming](#todo)
 - [SOLID](#solid)
 
 ### The Liskov Substitution Principle
@@ -336,11 +611,11 @@ The third of the '[SOLID](#solid)' principles. This principle states that if a c
 
 As an example, imagine we have a method which reads an XML document from a structure which represents a file. If the method uses a base type 'file', then anything which derives from 'file' should be able to be used in the function. If 'file' supports seeking in reverse, and the XML parser uses that function, but the derived type 'network file' fails when reverse seeking is attempted, then the 'network file' would be violating the principle.
 
-This principle has particular relevance for object-orientated programming, where type hierarchies must be modeled carefully to avoid confusing users of a system.
+This principle has particular relevance for object-oriented programming, where type hierarchies must be modeled carefully to avoid confusing users of a system.
 
 See also:
 
-- [Object-Orientated Programming](#todo)
+- [Object-Oriented Programming](#todo)
 - [SOLID](#solid)
 
 ### The Interface Segregation Principle
@@ -353,18 +628,18 @@ The fourth of the '[SOLID](#solid)' principles. This principle states that consu
 
 As an example, imagine we have a method which reads an XML document from a structure which represents a file. It only needs to read bytes, move forwards or move backwards in the file. If this method needs to be updated because an unrelated feature of the file structure changes (such as an update to the permissions model used to represent file security), then the principle has been invalidated. It would be better for the file to implement a 'seekable-stream' interface, and for the XML reader to use that.
 
-This principle has particular relevance for object-orientated programming, where interfaces, hierarchies and abstract types are used to [minimise the coupling](#todo) between different components. [Duck typing](#todo) is a methodology which enforces this principle by eliminating explicit interfaces.
+This principle has particular relevance for object-oriented programming, where interfaces, hierarchies and abstract types are used to [minimise the coupling](#todo) between different components. [Duck typing](#todo) is a methodology which enforces this principle by eliminating explicit interfaces.
 
 See also:
 
-- [Object-Orientated Programming](#todo)
+- [Object-Oriented Programming](#todo)
 - [SOLID](#solid)
 - [Duck Typing](#todo)
 - [Decoupling](#todo)
 
 ### The Dependency Inversion Principle
 
-[The Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
+[The Dependency Inversion Principle on Wikipedia](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
 
 > High-level modules should not be dependent on low-level implementations.
 
@@ -376,10 +651,101 @@ This principle is complex, as it can seem to 'invert' the expected dependencies 
 
 See also:
 
-- [Object-Orientated Programming](#todo)
+- [Object-Oriented Programming](#todo)
 - [SOLID](#solid)
 - [Inversion of Control](#todo)
 - [Dependency Injection](#todo)
+
+### The DRY Principle
+
+[The DRY Principle on Wikipedia](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+
+> Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
+
+DRY is an acronym for _Don't Repeat Yourself_. This principle aims to help developers reducing the repetition of code and keep the information in a single place and was cited in 1999 by Andrew Hunt and Dave Thomas in the book [The Pragmatic Developer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
+
+> The opposite of DRY would be _WET_ (Write Everything Twice or We Enjoy Typing).
+
+In practice, if you have the same piece of information in two (or more) different places, you can use DRY to merge them into a single one and reuse it wherever you want/need.
+
+See also:
+
+- [The Pragmatic Developer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
+
+### The KISS principle
+
+[KISS on Wikipedia](https://en.wikipedia.org/wiki/KISS_principle)
+
+> Keep it simple, stupid
+
+The KISS principle states that most systems work best if they are kept simple rather than made complicated; therefore, simplicity should be a key goal in design, and unnecessary complexity should be avoided.  Originating in the U.S. Navy in 1960, the phrase has been associated with aircraft engineer Kelly Johnson.
+
+The principle is best exemplified by the story of Johnson handing a team of design engineers a handful of tools, with the challenge that the jet aircraft they were designing must be repairable by an average mechanic in the field under combat conditions with only these tools. Hence, the "stupid" refers to the relationship between the way things break and the sophistication of the tools available to repair them, not the capabilities of the engineers themselves. 
+
+See also:
+
+- [Gall's Law](#galls-law)
+
+### YAGNI
+
+[YAGNI on Wikipedia](https://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it)
+
+This is an acronym for _**Y**ou **A**in't **G**onna **N**eed **I**t_.
+
+> Always implement things when you actually need them, never when you just foresee that you need them.
+>
+> ([Ron Jeffries](https://twitter.com/RonJeffries)) (XP co-founder and author of the book "Extreme Programming Installed")
+
+This _Extreme Programming_ (XP) principle suggests developers should only implement functionality that is needed for the immediate requirements, and avoid attempts to predict the future by implementing functionality that might be needed later.
+
+Adhering to this principle should reduce the amount of unused code in the codebase, and avoid time and effort being wasted on functionality that brings no value.
+
+See also:
+
+- [Reading List: Extreme Programming Installed](#reading-list)
+
+### The Fallacies of Distributed Computing
+
+[The Fallacies of Distributed Computing on Wikipedia](https://en.wikipedia.org/wiki/You_aren%https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)
+
+Also known as _Fallacies of Networked Computing_, the Fallacies are a list of conjectures (or beliefs) about distributed computing, which can lead to failures in software development. The assumptions are:
+
+- The network is reliable
+- Latency is zero
+- Bandwidth is infinite
+- The network is secure
+- Topology doesn't change
+- There is one administrator
+- Transport cost is zero
+- The network is homogeneous
+
+The first four items were listed by [Bill Joy](https://en.wikipedia.org/wiki/Bill_Joy) and [Tom Lyon](https://twitter.com/aka_pugs) around 1991 and first classified by [James Gosling](https://en.wikipedia.org/wiki/James_Gosling) as the "Fallacies of Networked Computing". [L. Peter Deutsch](https://en.wikipedia.org/wiki/L._Peter_Deutsch) added the 5th, 6th and 7th fallacies. In the late 90's Gosling added the 8th fallacy.
+
+The group were inspired by what was happening at the time inside [Sun Microsystems](https://en.wikipedia.org/wiki/Sun_Microsystems).
+
+These fallacies should be considered carefully when designing code which is resilient; assuming any of these fallacies can lead to flawed logic which fails to deal with the realities and complexities of distributed systems.
+
+See also:
+
+- [Foraging for the Fallacies of Distributed Computing (Part 1) - Vaidehi Joshi
+ on Medium](https://medium.com/baseds/foraging-for-the-fallacies-of-distributed-computing-part-1-1b35c3b85b53)
+- [Deutsch's Fallacies, 10 Years After](http://java.sys-con.com/node/38665)
+
+## Reading List
+
+If you have found these concepts interesting, you may enjoy the following books.
+
+- [Extreme Programming Installed - Ron Jeffries, Ann Anderson, Chet Hendrikson](https://www.goodreads.com/en/book/show/67834) - Covers the core principles of Extreme Programming.
+- [The Mythical Man Month - Frederick P. Brooks Jr.](https://www.goodreads.com/book/show/13629.The_Mythical_Man_Month) - A classic volume on software engineering. [Brooks' Law](#brooks-law) is a central theme of the book.
+- [Gödel, Escher, Bach: An Eternal Golden Braid - Douglas R. Hofstadter.](https://www.goodreads.com/book/show/24113.G_del_Escher_Bach) - This book is difficult to classify. [Hofstadter's Law](#hofstadters-law) is from the book.
+- [The Dilbert Principle - Scott Adams](https://www.goodreads.com/book/show/85574.The_Dilbert_Principle) - A comic look at corporate America, from the author who created the [Dilbert Principle](#the-dilbert-principle).
+- [The Peter Principle - Lawrence J. Peter](https://www.goodreads.com/book/show/890728.The_Peter_Principle) - Another comic look at the challenges of larger organisations and people management, the source of [The Peter Principle](#the-peter-principle).
+
+## Contributing
+
+Please do contribute! [Raise an issue](https://github.com/dwmkerr/hacker-laws/issues/new) if you'd like to suggest an addition or change, or [Open a pull request](https://github.com/dwmkerr/hacker-laws/compare) to propose your own changes.
+
+Please be sure to read the [Contributing Guidelines](./.github/contributing.md) for requirements on text, style and so on. Please be aware of the [Code of Conduct](./.github/CODE_OF_CONDUCT.md) when engaging in discussions on the project.
 
 ## TODO
 
